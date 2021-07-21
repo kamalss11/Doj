@@ -6,12 +6,13 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .dwn{
     text-align: center;
-    color: white;
-    background-color: #6D1CEF;
+    color: black;
+    background-color: #efd13a;
     padding: 7px 0;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .dwn p a{
-    color: #FFE713;
+    color: black;
 }
 
 .pg{
@@ -29,10 +30,11 @@
 
 .pg-1{
     height: calc(100vh - 30px);
-    background-color: #6435af;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #e8e8e8;
+    position: relative;
 }
 
 .pg-1 .tp{
@@ -59,8 +61,39 @@
 .pg-1 .left p{
     margin: 20px 0;
     line-height: 32px;
-    color: white;
     font-size: 20px;
+}
+
+.pg-1 .scrl{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+
+.pg-1 .scrl div{
+    height: 35px;
+    width: 25px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.pg-1 .scrl div i{
+    animation: ud 1s infinite;
+}
+
+@keyframes ud{
+    0%{
+        transform: translateY(2px);
+    }
+
+    50%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateY(2px);
+    }
 }
 
 .pg-2{
@@ -79,11 +112,12 @@
 }
 
 .pg-2 div{
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 144, 255, 0.95);
-    padding: 50px 10px;
+    background-color: rgba(51, 140 ,185,.9);
+    padding: 35px 10px;
     color: white;
 }
 
@@ -103,7 +137,7 @@
 }
 
 .pg-2 div h2 a{
-    color: #FFE713;
+    color: white;
 }
 
 .pg-2 div h1,.pg-2 div h2{
@@ -111,14 +145,14 @@
     width: 100%;
 }
 
-.pg-3,.pg-4,.pg-5{
+.pg-3,.pg-4{
+    position: relative;
     display: flex;
 }
 
 .pg-3 .left,.pg-3 .right,
-.pg-4 .left,.pg-4 .right,
-.pg-5 .left,.pg-5 .right{
-    padding: 30px 0;
+.pg-4 .left,.pg-4 .right{
+    padding: 130px 0;
     flex-basis: 50%;
     display: flex;
     align-items: center;
@@ -126,65 +160,69 @@
 }
 
 .pg-3 .left{
-    background-color: #ff9b00;
+    background-color: #bb3560;
+    background-image: url(../Images/dojo_img2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pg-3 .left img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pg-4 .right{
+    color: white;
+    background-color: #c3883e;
 }
 
 .pg-4 .left{
-    background-color: #0090ff;
+    background-color: #c3883ec4;
 }
 
-.pg-5 .left{
-    background-color: #3bc94b;
-}
-
-.pg-3 .right,.pg-5 .right{
-    background-color: black;
-    color: white;
+.pg-3 .right{
+    background: linear-gradient(to bottom right, #a692ce 0%, #d09cc9 100%);
 }
 
 .pg-3 .right div,
-.pg-4 .right div,
-.pg-5 .right div{
+.pg-4 .right div{
     padding: 0 10vw;
 }
 
 .pg-3 .right div h1,
-.pg-4 .right div h1,
-.pg-5 .right div h1{
+.pg-4 .right div h1{
     font-size: 2.3em;
 }
 
 .pg-3 .right div p,
-.pg-4 .right div p,
-.pg-5 .right div p{
+.pg-4 .right div p{
     margin: 20px 0;
     font-size: 18px;
     line-height: 30px;
 }
 
 .pg-3 .right div a,
-.pg-4 .right div a,
-.pg-5 .right div a{
+.pg-4 .right div a{
     font-size: 25px;
     font-weight: bold;
 }
 
 .pg-3 .right div a{
-    color: #ff9b00;
+    color: black;
 }
 
 .pg-4 .right div a{
-    color: #0090ff;
-}
-
-.pg-5 .right div a{
-    color: #3bc94b;
+    color: white;
 }
 
 .section-1{
-    padding: 90px 10px;
+    padding: 90px 15vw;
     height: 400px;
-    background-color: #FFE351;
+    background-color: #e8e8e8;
     text-align: center;
     position: relative;
 }
@@ -196,12 +234,13 @@
 .section-1 p{
     font-size: 20px;
     margin: 18px 0;
+    line-height: 35px;
 }
 
 .section-1 a{
     font-weight: bolder;
     font-size: 23px;
-    color: #0090ff;
+    color: black;
 }
 
 .section-1 img{
@@ -290,6 +329,10 @@
         width: 320px;
     }
 
+    #scr{
+        display: none;
+    }
+
     .pg-1{
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -330,6 +373,10 @@
         flex-direction: column-reverse;
     }
 
+    .section-1 {
+        padding: 90px 0;
+    }
+
     .pg-3 .left,.pg-3 .right,
     .pg-4 .left,.pg-4 .right,
     .pg-5 .left,.pg-5 .right{
@@ -339,6 +386,10 @@
 
     .pg-4 .right{
         padding: 250px 10px;
+    }
+
+    .pg-1 .tp{
+        height: 100px;
     }
 
     .cp{
@@ -377,6 +428,10 @@
 @media(max-width: 540px){
     .pg-1{
         flex-wrap: nowrap;
+    }
+
+    .pg-1 .tp{
+        height: 50px;
     }
 }
 
