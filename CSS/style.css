@@ -585,6 +585,10 @@
     .section-2 h2{
         font-size: 1.3em;
     }
+
+    .section-1 {
+        height: 350px;
+    }
 }
 
 @media(max-width: 280px){
