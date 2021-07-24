@@ -181,6 +181,7 @@
     padding: 0;
     background-color: #c3883ec4;
     text-align: center;
+    align-items: flex-end;
 }
 
 .pg-4 .left img{
@@ -382,7 +383,8 @@
     }
 
     .section-1 {
-        padding: 90px 0;
+        padding: 90px 10px;
+        height: 430px;
     }
 
     .pg-3 .left,
@@ -399,10 +401,6 @@
     .pg-3 .right,.pg-4 .right{
         height: 350px;
         flex-basis: 100%;
-    }
-
-    .section-1{
-        height: 400px;
     }
 
     .pg-1 .tp{
@@ -520,6 +518,7 @@
 
     .section-1 {
         padding: 50px 15px;
+        height: 380px;
     }
 
     .ptc{
@@ -538,10 +537,6 @@
 
     .pg-2 div h1,.pg-3 .right div h1, .pg-4 .right div h1,.section-1 h1,.section-2 h1{
         font-size: 2em;
-    }
-
-    .pg-3 .right, .pg-4 .right{
-        height: 450px;
     }
 }
 
